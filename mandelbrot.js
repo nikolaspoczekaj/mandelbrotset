@@ -16,7 +16,7 @@ function startMandelbrot(){
                 var bb = 2 * a * b;
                 a = aa + ca;
                 b = bb + cb;
-                if (a * a + b * b > 16) {
+                if (a * a + b * b > 5) {
                   break;
                 }
                 n++;
@@ -31,12 +31,12 @@ function startMandelbrot(){
 
             var pix = (x + y * width) * 4;
             pixels[pix + 0] = bright;
-            pixels[pix + 1] = bright;
-            pixels[pix + 2] = bright;
+            pixels[pix + 1] = bright/2;
+            pixels[pix + 2] = bright/2;
             pixels[pix + 3] = 255;
             
         }
         
-    
     updatePixels();
+    
 }
